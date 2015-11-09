@@ -6,7 +6,7 @@
   <% @movies.each do |movie| %>
     <li><%= movie.title %></li>
     <li><%= movie.rating %></li>
-    <li><%= movie.total_gross %></li>
+    <li><%= format_price(movie) %></li>
     <li><%= movie.description %></li>
     <li><%= movie.released_on %></li>
     <li><%= link_to movie.title, movie_path(movie) %></li>

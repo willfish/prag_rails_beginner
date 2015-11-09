@@ -14,12 +14,4 @@ describe 'Viewing the list of movies' do
     expect(page).to have_text(movie3.title)
     expect(page).to have_text(movie4.title)
   end
-
-  it "shows all the correct attributes" do
-    expect(page).to have_text(movie1.title)
-    expect(page).to have_text(movie1.rating)
-    expect(page).to have_text(movie1.total_gross)
-    expect(page).to have_text(movie1.description)
-    expect(page).to have_text(movie1.released_on)
-  end
 end
