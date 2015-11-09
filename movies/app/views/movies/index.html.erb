@@ -1,5 +1,5 @@
 <h1>
-  3 Movies
+  <h1><%= pluralize(@movies.size, 'Movie') %></h1>
 </h1>
 
 <ul>
@@ -9,5 +9,6 @@
     <li><%= movie.total_gross %></li>
     <li><%= movie.description %></li>
     <li><%= movie.released_on %></li>
+    <li><%= link_to movie.title, movie_path(movie) %></li>
   <% end %>
 </ul>
