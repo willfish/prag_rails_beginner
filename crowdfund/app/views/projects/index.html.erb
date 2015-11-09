@@ -1,0 +1,9 @@
+<h1><%= pluralize(@projects.count, 'Projects') %></h1>
+<% @projects.each do |project| %>
+  <li>
+    <strong><%= project.name %></strong>:
+    <%= truncate(project.description, length: 100) %>:
+    <%= number_to_currency(project.target_pledge_amount, unit: '£') %>:
+    <%= format_target_pledge_amount(project) %> -- <%= project.website %>
+  </li>
+<% end %>
