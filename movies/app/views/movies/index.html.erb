@@ -1,0 +1,13 @@
+<h1>
+  3 Movies
+</h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li><%= movie.title %></li>
+    <li><%= movie.rating %></li>
+    <li><%= movie.total_gross %></li>
+    <li><%= movie.description %></li>
+    <li><%= movie.released_on %></li>
+  <% end %>
+</ul>
