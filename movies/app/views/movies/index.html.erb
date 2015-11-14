@@ -1,43 +1,43 @@
-<h1><%= pluralize(@events.size, 'Event') %></h1>
-<% @events.each do |event| %>
+<h1><%= pluralize(@movies.size, 'Movie') %></h1>
+<% @movies.each do |movie| %>
   <article>
     <header>
-      <h2><%= event.name %></h2>
+      <h2><%= movie.title %></h2>
     </header>
     <p>
-      <%= truncate(event.description) %>
+      <%= truncate(movie.description) %>
     </p>
     <table>
       <tr>
         <th>
-          When:
+          Released:
         </th>
         <td>
-          <%= event.starts_at %>
+          <%= movie.released_on %>
         </td>
       </tr>
       <tr>
         <th>
-          Where:
+          Rating:
         </th>
         <td>
-          <%= event.location %>
+          <%= movie.rating %>
         </td>
       </tr>
       <tr>
         <th>
-          Price:
+          Total Gross:
         </th>
         <td>
-          <%= format_price(event) %>
+          <%= format_price(movie) %>
         </td>
       </tr>
       <tr>
         <th>
-          Event URL:
+          Movie URL:
         </th>
         <td>
-          <%= link_to event.name, event_path(event) %>
+          <%= link_to movie.title, movie_path(movie) %>
         </td>
       </tr>
     </table>
