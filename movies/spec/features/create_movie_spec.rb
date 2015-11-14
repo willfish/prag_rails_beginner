@@ -12,7 +12,7 @@ describe "Creating a new movie" do
     fill_in "Description", with: "Superheroes saving the world from villains"
     fill_in "Rating", with: "PG-13"
     fill_in "Total gross", with: "75000000"
-    fill_in (Time.now.year - 1).to_s
+    fill_in "Released on", with: (Time.now.year - 1).to_s
 
     # If you're taking advantage of the HTML 5 date field in Chrome,
     # you'll need to use 'fill_in' rather than 'select'

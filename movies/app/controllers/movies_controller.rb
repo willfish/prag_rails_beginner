@@ -17,11 +17,11 @@ class MoviesController < ApplicationController
     redirect_to movie_path(@movie)
   end
 
-  def create
+  def new
     @movie = Movie.new
   end
 
-  def new
+  def create
     @movie = Movie.new(movie_params)
     @movie.save
     redirect_to movie_path(@movie)
