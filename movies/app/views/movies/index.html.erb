@@ -3,11 +3,11 @@
 <%= link_to 'Add New Movie', new_movie_path(@movie) %>
 
 <% @movies.each do |movie| %>
-  <article>
+  <article class='movie'>
     <header>
       <h2><%= movie.title %></h2>
       <p>
-        <%= image_for(movie) %>
+        <%= image_for(movie) %><br>
       </p>
     </header>
     <p>
