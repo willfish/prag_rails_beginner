@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "Deleting a movie" do
+  let(:movie_attributes) { attributes_for(:movie) }
   it "destroys the movie and shows the movie listing without the deleted movie" do
     movie = Movie.create(movie_attributes)
 
