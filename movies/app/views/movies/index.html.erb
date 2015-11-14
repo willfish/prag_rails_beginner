@@ -6,6 +6,9 @@
   <article>
     <header>
       <h2><%= movie.title %></h2>
+      <p>
+        <%= image_for(movie) %>
+      </p>
     </header>
     <p>
       <%= truncate(movie.description) %>
@@ -33,6 +36,32 @@
         </th>
         <td>
           <%= format_price(movie) %>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Duration:
+        </th>
+        <td>
+          <%= movie.duration %>
+        </td>
+      </tr>
+
+      <tr>
+        <th>
+          Director:
+        </th>
+        <td>
+          <%= movie.director %>
+        </td>
+      </tr>
+
+      <tr>
+        <th>
+          Cast:
+        </th>
+        <td>
+          <%= movie.cast %>
         </td>
       </tr>
       <tr>

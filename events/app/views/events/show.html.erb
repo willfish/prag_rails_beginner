@@ -17,6 +17,14 @@
   <p>
     <%= format_price(@event) %>
   </p>
+  <h3>Capacity</h3>
+  <p>
+    <%= pluralize(@event.capacity, 'spot') %> available.
+  </p>
+  <h3>Image File Name</h3>
+  <p>
+    <%= @event.image_file_name %>
+  </p>
 </article>
 
 <p>
