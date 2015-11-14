@@ -7,9 +7,7 @@
 </p>
 <p>
   <%= f.label :rating %><br>
-  <%= form_tag do %>
-    <%= select_tag :rating, options_for_select(Movie::RATINGS) %>
-  <% end %>
+  <%= f.text_field :rating %>
 </p>
 <p>
   <%= f.label :total_gross %><br>
