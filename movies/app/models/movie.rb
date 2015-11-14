@@ -5,4 +5,8 @@ class Movie < ActiveRecord::Base
   def flop?
     total_gross < FLOP_THRESHOLD
   end
+
+  def self.released
+    where('released_on <= ?', Time.now).order(:released_on)
+  end
 end
